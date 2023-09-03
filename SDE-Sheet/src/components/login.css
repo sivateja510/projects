@@ -1,0 +1,238 @@
+* .max{
+    box-sizing: border-box;
+}
+
+.max {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(172, 152, 152, 0.7);
+}
+
+.login_container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+
+.left {
+    width: 50%;
+    /* background-color: rgb(93, 165, 248); */
+    /* background: linear-gradient(160deg, #3489f0, #B5D6FD, #5a98e3, #7977cf); */
+    /* background: linear-gradient( #3489f0, #B5D6FD, #5a98e3, #7977cf); */
+    background: linear-gradient(-45deg, #F3904F, #3B4371);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.right {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* height: 100vh; */
+    padding-bottom: 50px;
+}
+img{
+    height: 400px;
+    /* mix-blend-mode: soft-light; */
+}
+
+.labels {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.labels form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.labels form .input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.labels form .input-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.labels form input {
+    height: 40px;
+    width: 300px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    background-color: #c8c8c8;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.labels form .btn-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labels form .btn-container button {
+    height: 40px;
+    width: 300px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, #A770EF, #CF8BF3, #FDB99B);
+    border-radius: 3px;
+    /* font-size: 20px; */
+    font-weight: bold;
+}
+
+.labels form .btn-container button.b {
+    background: linear-gradient(to right, #41295a, #2F0743);
+    color: #fff;
+}
+
+
+@media screen and (max-width:500px) {
+    .login_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        padding: auto;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:920px){
+    
+    .login_container {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        height: 80vh;
+    }
+    .left {
+        width: 50%;
+        /* background-color: rgb(93, 165, 248); */
+        /* background: linear-gradient(160deg, #3489f0, #B5D6FD, #5a98e3, #7977cf); */
+        /* background: linear-gradient( #3489f0, #B5D6FD, #5a98e3, #7977cf); */
+        background: linear-gradient(-45deg, #F3904F, #3B4371);
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+    }
+    
+    .right {
+        width: 50%;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+        padding-bottom: 50px;
+    }
+    .right h1{
+        font-size: 24px;
+    }
+    
+    .labels {
+        /* background-color: red; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .labels form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .labels form .input-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .labels form .input-container div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .labels form input {
+        height: 40px;
+        width: 300px;
+        border: none;
+        outline: none;
+        border-radius: 2px;
+        background-color: #c8c8c8;
+        padding-left: 10px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .labels form .btn-container {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .labels form .btn-container button {
+        height: 40px;
+        width: 300px;
+        border: none;
+        outline: none;
+        background: linear-gradient(to right, #A770EF, #CF8BF3, #FDB99B);
+        border-radius: 3px;
+        /* font-size: 20px; */
+        font-weight: bold;
+    }
+    
+    .labels form .btn-container button.b {
+        background: linear-gradient(to right, #41295a, #2F0743);
+        color: #fff;
+    }
+}
