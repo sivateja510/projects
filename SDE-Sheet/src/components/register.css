@@ -91,6 +91,7 @@
     font-weight: 600;
 }
 
+
 .labels form .btn-container {
     margin-top: 30px;
     display: flex;
@@ -236,4 +237,8 @@
         background: linear-gradient(to right, #41295a, #2F0743);
         color: #fff;
     }
+}
+.btn-container:hover{
+    cursor: pointer;
+    color:white;
 }

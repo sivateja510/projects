@@ -1,5 +1,6 @@
 import React from 'react'
 import './register.css';
+import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -33,7 +34,7 @@ export default function Register() {
     //     alert("Passwords don't match!");
     //     return;
     //   }
-  
+
     //   // Create a JSON object with the data
 
 
@@ -61,14 +62,29 @@ export default function Register() {
     const userData = {
         username: usename,
         password: usepwd,
-        emaill: emaill,
-      };
-    
+        email: emaill,
+    };
     const handleLogin = (e) => {
-        // e.preventDefault();
-        window.alert(JSON.stringify(userData));
+        e.preventDefault();
+        if (!userData.username || !userData.password || !userData.email) {
+            console.error('One or more fields are empty. Please fill in all required fields.');
+            window.alert("empty detected");
+            return; // Exit the function if any field is empty
+        }
+        
+        axios.post('http://localhost:8090/entry', userData).then((response) => {
+            
+            console.log('Data sent successfully:', response.data);
+            
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
     }
     
+    
+
 
 
 
@@ -85,7 +101,7 @@ export default function Register() {
                         <div>
                             <form >
                                 <div className='input-container'>
-                                <div>
+                                    <div>
                                         <label> FullName</label>
                                         <input type='text' value={usename} onChange={handlename} required></input>
                                     </div>
@@ -103,7 +119,7 @@ export default function Register() {
                                     </div>
                                 </div>
                                 <div className='btn-container'>
-                                    <button onClick={handleLogin} > Register</button>
+                                    <button onClick={handleLogin} type='submit' > Register</button>
                                 </div>
                             </form>
                         </div>
