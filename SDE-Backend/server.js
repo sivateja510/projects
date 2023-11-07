@@ -91,7 +91,12 @@ server.get('/OsAlgos',(req,res)=>
         res.json(docs);
     });
 })
-
+server.post('/entry',(req,res)=>{
+    const data=db.get('ques')
+    // console.log(req.body.username);
+    data.insert({username:req.body.username,Email:req.body.email,Password:req.body.password});
+    // console.log(userData);
+})
   
 server.listen(PORT, (error) =>{
     if(!error)
